@@ -15,8 +15,6 @@ TASK_ID=$2
 PARTITION=$3
 THRESHOLD=$4
 
-echo "token=${TOKEN} task_id=${TASK_ID} part=${PARTITION} threshold=${THRESHOLD}"
-
 disk_usage=$(df --output=pcent ${PARTITION} | tr -dc '0-9')
 
 if [[ disk_usage -gt $THRESHOLD ]]; then
