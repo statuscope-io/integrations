@@ -14,6 +14,9 @@ TOKEN=$1
 TASK_ID=$2
 URL=$3
 
+# Update vulnerability database of wpscan
+wpscan --update
+
 # Run a scan with wpscan then use jq to count the number of vulnerabilities found
 number_of_vulnerabilities=$(wpscan --url ${URL} --format json | jq '.version.vulnerabilities | length')
 
