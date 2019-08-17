@@ -13,3 +13,9 @@ python3 compare_pkg_configs.py \
         --token=<Task token> \
         --taskid=<Task ID>
 ```
+
+To run it every day at 1am, for example, add this to your crontab.
+
+```
+0 1 * * * /usr/bin/python3 /opt/statuscopeio/ubuntu/compare_pkg_configs.py --production=104.240.40.60 --staging=104.240.40.70 --token=439da120 --taskid=q72P7cmvBoR5mYojo
+```
