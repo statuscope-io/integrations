@@ -1,9 +1,10 @@
 # Installation
 
-First install the requirements,
+Download the latest release from https://github.com/statuscope-io/integrations/releases to your favorite folder, e.g. `/opt/statuscopeio/`.
+
+Install the requirements,
 
 ```python
-    pip install -r _lib/requirements.txt
+    pip3 install -r /opt/statuscopeio/_lib/requirements.txt
 ```
 
-Then download the latest release from https://github.com/statuscope-io/integrations/releases to your favorite folder.

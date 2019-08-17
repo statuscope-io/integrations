@@ -3,10 +3,12 @@
 
 import argparse
 import logging
+import os
 import sys
 
 # Add internal library to paths
-sys.path.append('../_lib')
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '_lib'))
+
 # Get a logger and set log level to INFO
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
