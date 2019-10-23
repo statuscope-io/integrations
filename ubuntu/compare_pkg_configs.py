@@ -44,8 +44,8 @@ except Exception as e:
     logger.error("Cannot get OS versions: {}".format(str(e)))
 
 if os_rel_prod != os_rel_staging:
-    message = "OS mismatch: production is %s while staging is %s"
-    logger.error(message % (os_ver_prod, os_ver_staging))
+    message = "OS mismatch: production is %s while staging is %s" % (os_ver_prod, os_ver_staging)
+    logger.error(message)
     sctask.signal_task_failure(flags.token, flags.taskid, reason=message)
 else:
     logger.info("OS match: production and staging have the same OS")
